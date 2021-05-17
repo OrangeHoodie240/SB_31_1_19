@@ -19,7 +19,11 @@ function parseNumberArray(queryPar){
 
 
 function mean(...args){
-    let len = args.length; 
+    let len = args.length;
+    if(len === 1){
+        return args[0];
+    } 
+    
     return args.reduce((a, b)=>{
         return a + b; 
     }) / len;
